@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Baralho</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <div class="container">
+            
+            
+            <h1 id="baralho-nome">Cards do baralho</h1>
+
+            <div class="add-card-container">
+                <button id="add-card-button">Criar card</button>
+            </div>
+
+            <div id="cards-container"></div>
+            
+            <button id="voltar" onclick="voltar()">Voltar</button>
+
+        </div>
+
+        <div id="custom-modal" class="modal">
+            <div class="modal-content">
+                <span id="close-modal" class="close">&times;</span>
+                <p id="modal-text"></p>
+            </div>
+        </div>
+
+        <!-- Modal para criar novo card -->
+        <div id="modal-container" class="modal-container">
+            <div class="modal-content">
+                <h2>Criar card</h2>
+                <input type="text" id="pergunta-input" placeholder="Digite a pergunta">
+                <input type="text" id="resposta-input" placeholder="Digite a resposta">
+                <button id="modal-confirm-button">Confirmar</button>
+                <button id="modal-cancel-button">Cancelar</button>
+            </div>
+        </div>
+
+        <footer>
+            Todos os direitos reservados.
+        </footer>
+
+        <script src="baralho.js"></script>
+    
+    </body>
+
+</html>

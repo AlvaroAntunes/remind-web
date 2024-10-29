@@ -1,0 +1,336 @@
+/* GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #211151;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+p {
+    text-align: justify;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* TOPO */
+.topo {
+    display: flex;
+    width: 100%;
+    background-color: black;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+.menu {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    padding: 15px;
+    padding-left: 80px;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #6a5bb5;
+}
+
+.imagem {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.imagem img {
+    padding: 15px;
+    width: 80px;
+    height: 80px;
+}
+
+.imagem h3 {
+    margin-left: 20px;
+}
+
+/* CONTEÚDO */
+.conteudo {
+    font-size: 20px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to left, #4b0082, #211151 30%, #3cb371);
+    height: 300px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.titulo h1 {
+    color: white;
+    font-size: 72px;
+}
+
+/* RODAPÉ */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(0, 0, 0);
+    margin-top: 100px;
+    color: white;
+}
+
+.menu li.active a {
+    color: #68A6FF;
+}
+
+#baralhos-container, #cards-container {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.baralho-button, .card-button {
+    background-color: #B3ADFF;
+    border: none;
+    border-radius: 15px;
+    margin: 20px auto;
+    cursor: pointer;
+    width: 1000px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.card-button {
+    font-size: 20px;
+    background-color: #4434FF;
+    color: white;
+}
+
+
+.baralho-button:hover, .card-button:hover {
+    background-color: #6a5bb5;
+}
+
+/* ESTILO PARA A BARRA DE PESQUISA */
+#search-bar {
+    width: 1100px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin: 20px auto;
+    display: block;
+    font-size: 16px;
+    color: #fff;
+    background: linear-gradient(to left, #b3adff, #6a5acd);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#search-bar::placeholder {
+    color: #ffffff;
+    opacity: 1;
+}
+
+#search-bar:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(106, 90, 205, 0.5);
+}
+
+/* ESTILOS PARA O CONTÊINER DO BOTÃO DE ADICIONAR BARALHO */
+.add-baralho-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    margin-bottom: 50px;
+}
+
+/* ESTILOS PARA O BOTÃO DE ADICIONAR BARALHO */
+#add-baralho-button, #add-card-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    background-color: #4434FF;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 200px;
+}
+
+#add-card-button {
+    background-color:#B3ADFF;
+    color: #28065E;
+}
+
+#add-baralho-button:hover, #add-card-button:hover{
+    background-color: #665fb4;
+}
+
+#add-baralho-button:focus, #add-card-button:focus {
+    outline: none;
+}
+
+/* Estilo do modal */
+.modal {
+    display: none; /* Esconde por padrão */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro */
+}
+
+/* Conteúdo do modal */
+.modal-content {
+    background-color: #4434FF;
+    margin: 20% auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Botão de fechar */
+.close {
+    color: #ffffff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+/* Estilos para o modal */
+.modal-container {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #4434FF;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.modal-content button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#modal-confirm-button {
+    background-color: #00ac09;
+    color: white;
+    margin-right: 10px;
+}
+
+#modal-cancel-button {
+    background-color: #dc3545;
+    color: white;
+}
+
+#baralho-nome {
+    padding: 50px;
+    color: white;
+}
+
+#voltar {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff; /* Azul padrão */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+}
+
+#voltar:hover {
+    background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+}
+
+#voltar:active {
+    background-color: #004085; /* Azul ainda mais escuro ao clicar */
+}
